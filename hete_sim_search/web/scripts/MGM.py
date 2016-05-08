@@ -2,7 +2,7 @@ from functions import *
 
 if __name__ == '__main__':
 	try:
-		movie_input = str(sys.argv[1])
+		query = str(sys.argv[1])
 		top_K = int(sys.argv[2])
 
 		outputFilename = os.getcwd() + "\..\outputs" +"\\"+ query + "_" + str(sys.argv[0]).split('.')[0] + ".json"
@@ -20,7 +20,7 @@ if __name__ == '__main__':
 
 		graph = connect_graph()
 
-		query_xx = "MATCH (m:movie {title:'"+movie_input+"'})-[GENRE]->(g:genre) MATCH (g)<-[GENRE]-(m) \
+		query_xx = "MATCH (m:movie {title:'"+query+"'})-[GENRE]->(g:genre) MATCH (g)<-[GENRE]-(m) \
 					RETURN m as movie,count(m.title) as count"
 		xx = execute_query(query_xx,graph)
 		
@@ -34,7 +34,7 @@ if __name__ == '__main__':
 				xx_value = int(result.count)
 				break
 
-		query_xy = "MATCH (m:movie {title:'"+movie_input+"'})-[g1:GENRE]->(g:genre)<-[g2:GENRE]-(m2:movie) \
+		query_xy = "MATCH (m:movie {title:'"+query+"'})-[g1:GENRE]->(g:genre)<-[g2:GENRE]-(m2:movie) \
 					RETURN m2 as movie,count(m2.title) as count"
 		xy = execute_query(query_xy,graph)
 
@@ -43,7 +43,7 @@ if __name__ == '__main__':
 			hashmap.setdefault(result.movie['title'],[]) 
 			hashmap[result.movie['title']].append(result.count)
 
-		query_yy = "MATCH (m:movie {title:'"+movie_input+"'})-[g1:GENRE]->(g3:genre)<-[g2:GENRE]-(m2:movie) \
+		query_yy = "MATCH (m:movie {title:'"+query+"'})-[g1:GENRE]->(g3:genre)<-[g2:GENRE]-(m2:movie) \
 					MATCH (m2)-[g4:GENRE]->(g) \
 					MATCH (g)<-[g5:GENRE]-(m2) \
 					RETURN m2 as movie,count(m2.title) as count"
@@ -76,7 +76,7 @@ if __name__ == '__main__':
 		print(json.dumps(outJsonObj))
 
 		output_file.close()
-	except Exceptione:
+	except Exception:
 		resultJson = {}
 		resultJson["data"] = ["Error"]
 		print(json.dumps(resultJson))
