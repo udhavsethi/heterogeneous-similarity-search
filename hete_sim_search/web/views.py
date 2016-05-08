@@ -1,8 +1,13 @@
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
 from django.http import HttpResponse
+from django.template import loader
 
 from subprocess import Popen, PIPE
 import os
+
+# def home(request):
+#     template = loader.get_template('web/index.html')
+#     return HttpResponse(template.render)
 
 def auto_complete(request):
     # if request.method == 'POST':
