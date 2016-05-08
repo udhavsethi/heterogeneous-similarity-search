@@ -58,14 +58,14 @@ def find_topK_results(query, top_K, query_xx, query_xy, query_yy):
 
 	hashmap = {}
 	for result in xy:
-		hashmap.setdefault(result.actor['name'],[]) 
-		hashmap[result.actor['name']].append(result.count)
+		hashmap.setdefault(result.query_result['name'],[]) 
+		hashmap[result.query_result['name']].append(result.count)
 
 	#yy
 	yy = execute_query(query_yy,graph)
 
 	for result in yy:
-		key = result.actor['name']
+		key = result.query_result['name']
 		value = hashmap[key]
 		value.append(result.count)
 		xy_value = int(value[0])
