@@ -45,6 +45,9 @@ def find_topK_results(query, top_K, query_xx, query_xy, query_yy):
 	
 	if len(xx) == 0:
 		xx_value = 0
+		jsonResult = {"data": []}
+		print(json.dumps(jsonResult))
+		sys.exit()
 	else:	
 		for result in xx:
 			xx_value = int(result.count)
