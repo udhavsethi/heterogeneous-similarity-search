@@ -7,9 +7,6 @@ if __name__ == '__main__':
 	actor_input = str(sys.argv[1])
 	top_K = int(sys.argv[2])
 
-	# print(actor_input, top_K)
-	# sys.exit()
-
 	outputFilename = os.getcwd() + "\..\outputs" +"\\"+ actor_input + "_" + str(sys.argv[0]).split('.')[0] + ".json"
 
 	if os.path.isfile(outputFilename) and os.stat(outputFilename).st_size > 0:

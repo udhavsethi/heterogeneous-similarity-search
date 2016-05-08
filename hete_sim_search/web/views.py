@@ -22,9 +22,9 @@ def top_k_results(request):
         
         #Extract Values from POST variables
         label = request.POST.get('label', 'actor')
-        meta_path = request.POST.get('meta_path','AMA')
+        meta_path = request.POST.get('meta_path','AMAMA')
         k_value = request.POST.get('k_value', '10')
-        query = request.POST.get('query', 'Hitanshu Arora')
+        query = request.POST.get('query', 'Paul Maar')
         
         #Run coresponding script and return data
         scriptPath = os.getcwd()+r"\web\scripts"
