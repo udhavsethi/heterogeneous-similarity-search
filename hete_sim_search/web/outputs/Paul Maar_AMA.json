@@ -1,0 +1,30 @@
+{
+    "data": [{
+        "score": 1.0,
+        "name": "Ernst Jacobi"
+    }, {
+        "score": 0.6666666666666666,
+        "name": "Gert Burkard"
+    }, {
+        "score": 0.5,
+        "name": "Constantin Gastmann"
+    }, {
+        "score": 0.5,
+        "name": "Josef Bradna"
+    }, {
+        "score": 0.5,
+        "name": "Ingo Pfeiffer"
+    }, {
+        "score": 0.2222222222222222,
+        "name": "Gottfried John"
+    }, {
+        "score": 0.2,
+        "name": "Dominique Horwitz"
+    }, {
+        "score": 0.13333333333333333,
+        "name": "Armin Rohde"
+    }, {
+        "score": 0.09090909090909091,
+        "name": "Ulrich Noethen"
+    }]
+}

@@ -1,6 +1,216 @@
 {
-	"data": [
-		{"name" : "Big Ash", "score": 0.2},
-		{"name" : "Dennis Ruel", "score": 0.1}
-	]
+    "data": [{
+        "name": "Chris (I) Grant",
+        "score": 0.5
+    }, {
+        "name": "Dennis Ruel",
+        "score": 0.5
+    }, {
+        "name": "Demon Lee",
+        "score": 0.5
+    }, {
+        "name": "Leeshon Alexander",
+        "score": 0.5
+    }, {
+        "name": "Big Ash",
+        "score": 0.5
+    }, {
+        "name": "Jerred Yeash",
+        "score": 0.5
+    }, {
+        "name": "Jason Bains",
+        "score": 0.5
+    }, {
+        "name": "Raj Pandya",
+        "score": 0.5
+    }, {
+        "name": "Harsimran",
+        "score": 0.5
+    }, {
+        "name": "Vijay Mohan",
+        "score": 0.5
+    }, {
+        "name": "Alan Mortlock",
+        "score": 0.5
+    }, {
+        "name": "Steven Kwon",
+        "score": 0.4
+    }, {
+        "name": "Kevin Dedes",
+        "score": 0.4
+    }, {
+        "name": "David (XCIII) Smith",
+        "score": 0.4
+    }, {
+        "name": "Adi Kemp",
+        "score": 0.4
+    }, {
+        "name": "Amrit Pal Singh",
+        "score": 0.4
+    }, {
+        "name": "Brian Croucher",
+        "score": 0.4
+    }, {
+        "name": "Andi Jashari",
+        "score": 0.4
+    }, {
+        "name": "Dana Haqjoo",
+        "score": 0.3333333333333333
+    }, {
+        "name": "Rufus Hound",
+        "score": 0.3333333333333333
+    }, {
+        "name": "Sagar Arya",
+        "score": 0.3333333333333333
+    }, {
+        "name": "Ewen MacIntosh",
+        "score": 0.3333333333333333
+    }, {
+        "name": "Stuart Furlong",
+        "score": 0.3333333333333333
+    }, {
+        "name": "Isa Magomedov",
+        "score": 0.3333333333333333
+    }, {
+        "name": "Maxwell Laird",
+        "score": 0.3333333333333333
+    }, {
+        "name": "Jeremiah (II) Turner",
+        "score": 0.2857142857142857
+    }, {
+        "name": "Kavi Shastri",
+        "score": 0.2857142857142857
+    }, {
+        "name": "Chandan Anand",
+        "score": 0.2857142857142857
+    }, {
+        "name": "Matthew Kaye",
+        "score": 0.2857142857142857
+    }, {
+        "name": "Ciaran Griffiths",
+        "score": 0.2857142857142857
+    }, {
+        "name": "Kevin Wenman",
+        "score": 0.25
+    }, {
+        "name": "Sonu Louis",
+        "score": 0.25
+    }, {
+        "name": "Kugan Cassius",
+        "score": 0.25
+    }, {
+        "name": "Ricky Grover",
+        "score": 0.25
+    }, {
+        "name": "Nick Onsloe",
+        "score": 0.25
+    }, {
+        "name": "Raman Rai",
+        "score": 0.25
+    }, {
+        "name": "Sanjay (I) Gandhi",
+        "score": 0.2222222222222222
+    }, {
+        "name": "Ben (X) Morris",
+        "score": 0.2222222222222222
+    }, {
+        "name": "Rajinder Sharma Nanu",
+        "score": 0.2
+    }, {
+        "name": "Dheerendra Dwivedi",
+        "score": 0.2
+    }, {
+        "name": "Ashley (I) Thomas",
+        "score": 0.18181818181818182
+    }, {
+        "name": "Patrick Moorhouse",
+        "score": 0.18181818181818182
+    }, {
+        "name": "Vir Das",
+        "score": 0.18181818181818182
+    }, {
+        "name": "Rahul (I) Khanna",
+        "score": 0.18181818181818182
+    }, {
+        "name": "Joshua Lou Friedman",
+        "score": 0.15384615384615385
+    }, {
+        "name": "Jayme Swiftt",
+        "score": 0.15384615384615385
+    }, {
+        "name": "Andy Linden",
+        "score": 0.15384615384615385
+    }, {
+        "name": "Sean Talo",
+        "score": 0.14285714285714285
+    }, {
+        "name": "Peter Capaldi",
+        "score": 0.14285714285714285
+    }, {
+        "name": "Eddie Webber",
+        "score": 0.13333333333333333
+    }, {
+        "name": "Zachary Culbertson",
+        "score": 0.125
+    }, {
+        "name": "Roland Manookian",
+        "score": 0.125
+    }, {
+        "name": "Robby Haynes",
+        "score": 0.11764705882352941
+    }, {
+        "name": "Mo Idriss",
+        "score": 0.11764705882352941
+    }, {
+        "name": "James (II) Helder",
+        "score": 0.1111111111111111
+    }, {
+        "name": "Eddie Bagayawa",
+        "score": 0.1111111111111111
+    }, {
+        "name": "Terry Shipton",
+        "score": 0.10526315789473684
+    }, {
+        "name": "Philip (II) Harvey",
+        "score": 0.1
+    }, {
+        "name": "Omid Djalili",
+        "score": 0.1
+    }, {
+        "name": "Leo (I) Gregory",
+        "score": 0.08695652173913043
+    }, {
+        "name": "Dave Legeno",
+        "score": 0.08333333333333333
+    }, {
+        "name": "Michael Smiley",
+        "score": 0.08333333333333333
+    }, {
+        "name": "Steven Berkoff",
+        "score": 0.06666666666666667
+    }, {
+        "name": "Geoff (I) Bell",
+        "score": 0.0625
+    }, {
+        "name": "Mick Slaney",
+        "score": 0.0625
+    }, {
+        "name": "Rishi (I) Kapoor",
+        "score": 0.06060606060606061
+    }, {
+        "name": "Saif Ali Khan",
+        "score": 0.05714285714285714
+    }, {
+        "name": "Nick Thomas-Webster",
+        "score": 0.05714285714285714
+    }, {
+        "name": "Shaun (III) Lucas",
+        "score": 0.05128205128205128
+    }, {
+        "name": "Rajendranath Zutshi",
+        "score": 0.046511627906976744
+    }, {
+        "name": "Chris (XXIX) Wilson",
+        "score": 0.027777777777777776
+    }]
 }
