@@ -1,12 +1,12 @@
 #!usr/bin/python
 
-
 from py2neo import authenticate,Graph
 from py2neo import Node, Relationship
 from py2neo.packages.httpstream import http 
 # from py2neo import watch
 import operator
 import sys
+import json
 
 def connect_graph():
 	# watch('httpstream')
@@ -14,8 +14,8 @@ def connect_graph():
 	password = 'neo4j123'
 	
 	# port for http: 7474 and for https: 7473
-	host_port = 'localhost:7474'
-	URI = 'localhost:7474/db/data'
+	host_port = '192.168.136.10:7474'
+	URI = '192.168.136.10:7474/db/data'
 	http.socket_timeout = 9999
 	
 	# set up authentication parameters
@@ -23,7 +23,7 @@ def connect_graph():
 
 	# connect to authenticated graph database
 	graph = Graph("http://"+host_port+"/db/data/")
-	print 'graph connected'
+	# print 'graph connected'
 	return graph
 
 def execute_query(query):
@@ -33,9 +33,14 @@ def execute_query(query):
 
 if __name__ == '__main__':
 
-	actor_input = str(raw_input('Enter the actor: '))
-	top_K = int(raw_input('Enter k for similarity: '))
+	# actor_input = str(raw_input('Enter the actor: '))
+	# top_K = int(raw_input('Enter k for similarity: '))
 
+	# if len(sys.argv) < 3:
+	# 	sys.exit("Usage: python file_name.py actor k_value")
+
+	actor_input = sys.argv[1]
+	top_K = sys.argv[2]
 
 	graph = connect_graph()
 	query_xx = "MATCH (a:actor {name:'"+str(actor_input)+"'})-[ACTED_IN]->(m) \
@@ -49,7 +54,7 @@ if __name__ == '__main__':
 		for result in xx:
 			xx_value = int(result.count)
 			break
-	print "xx: ",xx_value
+	# print "xx: ",xx_value
 
 	query_xy = "MATCH (a:actor {name:'"+str(actor_input)+"'})-[r1:ACTED_IN]->(m1:movie)<-[r2:ACTED_IN]-(b:actor) \
 	RETURN b as actor,count(b.name) as count"
@@ -69,7 +74,7 @@ if __name__ == '__main__':
 	for result in yy:
 		hashmap[result.actor['name']].append(result.count)
 
-	output_file = open("../../sample_outputs/length_3/" +actor_input+"_output_AMA.txt", "w")
+	# output_file = open("../../sample_outputs/length_3/" +actor_input+"_output_AMA.txt", "w")
 
 	for key, value in hashmap.iteritems():
 		xy_value = int(value[0])
@@ -79,14 +84,14 @@ if __name__ == '__main__':
 
 	sorted_hashmap = sorted(hashmap.items(), key=lambda e: e[1][2], reverse=True)
 
-	# for i in range(len(sorted_hashmap)-1,len(sorted_hashmap)-top_K-1,-1):
-		# print sorted_hashmap[i][0],sorted_hashmap[i][1][2]
-
-
+	output = []
 	for i in range(0,top_K,1):
-		print sorted_hashmap[i][0],sorted_hashmap[i][1][2]
+		output.append([sorted_hashmap[i][0],sorted_hashmap[i][1][2]])
 
-	for i in sorted_hashmap:
-		output_file.write(str(i) + '\n')
+	print json.dumps(output)
 
-	output_file.close()
+
+	# for i in sorted_hashmap:
+		# output_file.write(str(i) + '\n')
+
+	# output_file.close()
