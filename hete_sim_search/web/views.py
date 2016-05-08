@@ -7,9 +7,9 @@ import os
 
 
 def auto_complete(request):
-    if request.method == 'POST':
+    if request.method == 'POST' or request.method == 'GET':
         label = request.POST.get('label', 'actor')
-        query = request.POST.get('query', '')
+        query = request.POST.get('query', 'tr')
         
         scriptPath = os.getcwd()+r"\web\scripts"
         p = Popen(["python", "autoComplete.py", label, query], cwd=scriptPath, stdout=PIPE, stderr=PIPE)
@@ -22,9 +22,9 @@ def top_k_results(request):
         
         #Extract Values from POST variables
         label = request.POST.get('label', 'actor')
-        meta_path = request.POST.get('meta_path','AMAMA')
+        meta_path = request.POST.get('meta_path','AMA')
         k_value = request.POST.get('k_value', '10')
-        query = request.POST.get('query', 'Paul Maar')
+        query = request.POST.get('query', 'Pauli Maar')
         
         #Run coresponding script and return data
         scriptPath = os.getcwd()+r"\web\scripts"
