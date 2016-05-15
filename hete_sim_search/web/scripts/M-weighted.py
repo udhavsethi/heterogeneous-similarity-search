@@ -2,13 +2,6 @@ from functions import *
 
 if __name__ == '__main__':
 
-	query = str(sys.argv[1])
-	top_K = int(sys.argv[2])
-	
-	
-
-if __name__ == '__main__':
-
 	movie_input = str(sys.argv[1])
 	top_K = int(sys.argv[2])
 
